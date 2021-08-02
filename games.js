@@ -9,10 +9,12 @@ function nextSequence() {
 }
 
 $("h1").click(function() {
-  console.log("clickled");
-  start = 1;
-  clearAll();
-  nextLevel();
+  if (start == 0) {
+    start = 1;
+    level = 0;
+    clearAll();
+    nextLevel();
+  }
 });
 
 function nextLevel() {
